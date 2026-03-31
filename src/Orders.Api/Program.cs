@@ -4,7 +4,8 @@ using Orders.Api.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add servicesuilder.Services.AddDbContext<AppDbContext>(opt =>
+// Add services
+builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection") ?? "Data Source=orders.db"));
 
 builder.Services.AddEndpointsApiExplorer();
