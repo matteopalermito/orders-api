@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: orders-api
-        image: ghcr.io/YOUR_GH_USERNAME/orders-api:latest
+        image: orders-api:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
